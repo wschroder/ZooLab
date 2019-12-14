@@ -6,9 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Managers\" />
-    <Folder Include="Repos\" />
+    <PackageReference Include="Unity" Version="5.11.2" />
   </ItemGroup>
 
 </Project>

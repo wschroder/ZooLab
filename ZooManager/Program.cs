@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity;
 
 namespace ZooManager
 {
@@ -6,7 +7,12 @@ namespace ZooManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IUnityContainer container = UnityConfig.Configure();
+
+            var menu = container.Resolve<IMenuManager>();
+
+            Console.WriteLine("[Press any key to exit]");
+            Console.ReadKey();
         }
     }
 }
