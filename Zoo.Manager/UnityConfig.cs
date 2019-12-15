@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Unity;
+﻿using Unity;
+using Zoo.Domain.Managers.Menu;
 
 namespace ZooManager
 {
@@ -11,6 +9,8 @@ namespace ZooManager
 
         public static IUnityContainer Configure()
         {
+            container.RegisterType<IMenuBuilder, MenuBuilder>();
+
             return container;
         }
     }

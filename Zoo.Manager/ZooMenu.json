@@ -1,0 +1,17 @@
+[
+  {
+    "Restaurant":  "IRestauntMenuPage"
+  },
+  {
+    "Gift Shop": [
+      { "Inventory": "IInventoryMenuPage" },
+      { "Reports": "IStoreReportsMenuPage" }
+    ]
+  },
+  {
+    "Animals": [
+      { "Population": "IAnimalPopulationMenuPage" },
+      { "Departments": "IDepartmentsMenuPage" }
+    ]
+  }
+]

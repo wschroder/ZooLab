@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Zoo.Domain</Name>
+    <Name>Zoo.Database</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{485301cf-07b1-40b9-b19f-aef8bed780fe}</ProjectGuid>
+    <ProjectGuid>{b1840c5e-fe0d-4042-b788-f5e0f11c89fc}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>Zoo.Domain</RootNamespace>
-    <AssemblyName>Zoo.Domain</AssemblyName>
+    <RootNamespace>Zoo.Database</RootNamespace>
+    <AssemblyName>Zoo.Database</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -57,7 +57,7 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Models" />
-    <Folder Include="Managers" />
+    <Folder Include="Scripts" />
+    <Folder Include="Tables" />
   </ItemGroup>
 </Project>
