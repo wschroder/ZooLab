@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Zoo.Common\Zoo.Common.csproj" />
     <ProjectReference Include="..\Zoo.Database\Zoo.Database.sqlproj" />
     <ProjectReference Include="..\Zoo.Domain\Zoo.Domain.csproj" />
   </ItemGroup>

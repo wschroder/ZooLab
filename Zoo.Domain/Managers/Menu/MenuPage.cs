@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Zoo.Common;
 
 namespace Zoo.Domain.Managers.Menu
 {
@@ -35,6 +36,7 @@ namespace Zoo.Domain.Managers.Menu
                 {
                     Console.WriteLine($"{++i}: {item.Name}");
                 }
+                Console.WriteLine();
                 Console.WriteLine("x: Exit");
                 Console.WriteLine();
                 Console.Write("Option: ");
@@ -59,23 +61,14 @@ namespace Zoo.Domain.Managers.Menu
                         catch (Exception ex)
                         {
                             string msg = ex.ToString();
-                            WriteConsoleError(msg);
+                            ConsoleLogger.WriteError(msg);
                         }
                         continue;
                     }
                 }
-                WriteConsoleError("Invalid option.  Hit any key to continue...");
+                ConsoleLogger.WriteError("Invalid option.  Hit any key to continue...");
                 Console.ReadKey();
             }
-        }
-
-        private static void WriteConsoleError(string msg)
-        {
-            ConsoleColor oldColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine(msg);
-            Console.WriteLine();
-            Console.ForegroundColor = oldColor;
         }
     }
 }

@@ -5,11 +5,10 @@ namespace Zoo.Domain.Managers.Menu
 {
     public class MenuBuilder : IMenuBuilder
     {
-        private Stack<MenuPage> menuPageStack = new Stack<MenuPage>();
-
         private Stack<MenuPage> pageStack = new Stack<MenuPage>();
 
-        private MenuPage currentMenuPage {
+        private MenuPage currentMenuPage
+        {
             get
             {
                 if (this.pageStack.Count==0)
@@ -20,6 +19,10 @@ namespace Zoo.Domain.Managers.Menu
             }            
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="name">Top level menu title</param>
         public MenuBuilder(string name)
         {
             MenuPage subPage = new MenuPage(name);
