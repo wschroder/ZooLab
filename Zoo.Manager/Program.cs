@@ -4,6 +4,7 @@ using Unity.Resolution;
 using Zoo.Common;
 using Zoo.Domain.Managers.Menu;
 using Zoo.Manager.Modules;
+using Zoo.Manager.Modules.Inventory;
 
 namespace ZooManager
 {

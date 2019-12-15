@@ -1,5 +1,5 @@
 ﻿using System;
-using Zoo.Domain;
+using Zoo.Domain.Managers.Menu;
 
 namespace Zoo.Manager.Modules
 {

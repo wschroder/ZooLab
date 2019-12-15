@@ -23,8 +23,8 @@ namespace Zoo.Domain.Managers.Menu
             {
                 ConsoleLogger.WriteError(ex.ToString());
                 Console.WriteLine("Hit any key to continue...");
-                Console.ReadKey();
             }
+            Console.ReadKey();
         }
     }
 }
