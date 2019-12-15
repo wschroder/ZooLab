@@ -3,6 +3,7 @@ using Unity;
 using Unity.Resolution;
 using Zoo.Common;
 using Zoo.Domain.Managers.Menu;
+using Zoo.Manager.Modules;
 
 namespace ZooManager
 {
@@ -16,14 +17,17 @@ namespace ZooManager
 
                 var menu = container.Resolve<IMenuBuilder>(new ParameterOverride("name", "Zoo Manager"));
 
-                menu.AddMenuItem("Restaurant", () => NullMenuAction.Process())
+                menu.AddMenuItem<NullModule>("Restaurant")
                     .PushPage("Gift Shop")
-                        .AddMenuItem("Inventory", () => NullMenuAction.Process())
-                        .AddMenuItem("Reports", () => NullMenuAction.Process())
+                        .AddMenuItem<InventoryModule>("Inventory")
                     .PopPage()
                     .PushPage("Animals")
-                        .AddMenuItem("Population", () => NullMenuAction.Process())
-                        .AddMenuItem("Departments", () => NullMenuAction.Process())
+                        .AddMenuItem<NullModule>("Population")
+                        .AddMenuItem<NullModule>("Departments")
+                    .PopPage()
+                    .PushPage("HR")
+                        .AddMenuItem<NullModule>("Payroll")
+                        .AddMenuItem<NullModule>("Employee Roster")
                     .PopPage();
 
                 menu.ShowMenu();

@@ -25,21 +25,21 @@ namespace Zoo.Domain.Managers.Menu
         /// <param name="name">Top level menu title</param>
         public MenuBuilder(string name)
         {
-            MenuPage subPage = new MenuPage(name);
+            MenuPage subPage = new MenuPage(name, string.Empty);
             this.pageStack.Push(subPage);
         }
 
         public MenuBuilder PushPage(string name)
         {
-            MenuPage subPage = new MenuPage(name);
+            MenuPage subPage = new MenuPage(name, this.currentMenuPage.BreadcrumbPath);
             currentMenuPage.AddMenuItem(subPage);
             this.pageStack.Push(subPage);
             return this;
         }
 
-        public MenuBuilder AddMenuItem(string name, Action action)
+        public MenuBuilder AddMenuItem<TModule>(string name) where TModule: IRunnable, new()
         {
-            MenuAction newItem = new MenuAction(name, action);
+            MenuAction<TModule> newItem = new MenuAction<TModule>(name);
             currentMenuPage.AddMenuItem(newItem);
             return this;
         }

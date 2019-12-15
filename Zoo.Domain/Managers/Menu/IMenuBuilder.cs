@@ -4,7 +4,7 @@ namespace Zoo.Domain.Managers.Menu
 {
     public interface IMenuBuilder
     {
-        MenuBuilder AddMenuItem(string name, Action action);
+        MenuBuilder AddMenuItem<TModule>(string name) where TModule : IRunnable, new();
 
         MenuBuilder PopPage();
 
