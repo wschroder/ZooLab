@@ -8,17 +8,17 @@ namespace Zoo.Manager.Modules.Inventory
     public class InventoryModule : IRunnable
     {
 
-        private readonly List<RetailItem> Inventory = new List<RetailItem>();
+        private readonly List<Item> Inventory = new List<Item>();
 
         public InventoryModule()
         {
-            this.Inventory = new List<RetailItem>
+            this.Inventory = new List<Item>
             {
 
-                new RetailItem(name: "Rubics Cube", unitPrice: 3.50m, onHand: 25),
-                new RetailItem(name: "Red Sweaters", unitPrice: 17.95m, onHand: 5),
-                new RetailItem(name: "Golf Clubs", unitPrice: 75.00m, onHand: 3),
-                new RetailItem(name: "Bowling Shoes", unitPrice: 19.95m, onHand: 8),
+                new Item(name: "Rubics Cube", unitPrice: 3.50m, onHand: 25),
+                new Item(name: "Red Sweaters", unitPrice: 17.95m, onHand: 5),
+                new Item(name: "Golf Clubs", unitPrice: 75.00m, onHand: 3),
+                new Item(name: "Bowling Shoes", unitPrice: 19.95m, onHand: 8),
             };
         }
         public void Run()

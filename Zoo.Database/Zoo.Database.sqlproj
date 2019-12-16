@@ -59,5 +59,13 @@
     <Folder Include="Properties" />
     <Folder Include="Scripts" />
     <Folder Include="Tables" />
+    <Folder Include="Types" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\RetailItem.sql" />
+    <Build Include="Types\UnitPriceType.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Local.publish.xml" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,9 @@
+﻿CREATE TABLE dbo.RetailItem
+(
+	Id INT NOT NULL PRIMARY KEY,
+	EntityId UNIQUEIDENTIFIER NOT NULL,
+	RecordedDate UNIQUEIDENTIFIER NOT NULL,
+	ItemName NVARCHAR(500) NOT NULL,
+	UnitPrice dbo.UnitPriceType NULL,
+	OnHand INT NULL
+)
